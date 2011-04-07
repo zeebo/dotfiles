@@ -1,0 +1,5 @@
+#!/bin/bash
+# This hook is run after a new virtualenv is activated.
+
+cd $VIRTUAL_ENV
+echo $VIRTUAL_ENV > .venv

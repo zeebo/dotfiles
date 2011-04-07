@@ -1,0 +1,6 @@
+ENV_NAME=$(echo $VIRTUAL_ENV|awk -F'/' '{print $NF}')
+cd $VIRTUAL_ENV
+if [ -f ${ENV_NAME}.sublime-project ]
+then
+	subl --project ${ENV_NAME}.sublime-project
+fi

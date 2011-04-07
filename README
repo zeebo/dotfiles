@@ -1,0 +1,4 @@
+Be sure to have Sublime Text 2 installed before invoking init.sh
+
+init.sh is a terrible hackjob that will probably run things if you have to
+run it more than once. So dont.
