@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#Get homebrew running
+ruby -e "$(curl -fsSL https://gist.github.com/raw/323731/install_homebrew.rb)"
+
 #Git config
 git config --global user.name jeff
 git config --global user.email leterip@gmail.com
