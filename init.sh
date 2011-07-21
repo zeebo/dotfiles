@@ -55,3 +55,6 @@ git clone git://github.com/apenwarr/bup
 cd bup
 make
 make test
+
+#Make key holding not stupid
+defaults write -g ApplePressAndHoldEnabled -bool NO
