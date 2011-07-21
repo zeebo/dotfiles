@@ -3,6 +3,8 @@ alias ls='ls -FlG'
 alias gs='git status'
 alias gl='git log --format=format:"%H %cn %s"'
 
+export PATH=$PATH:/usr/local/sbin
+
 export EDITOR='subl -w'
 
 export WORKON_HOME=$HOME/Code/envs
