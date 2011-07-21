@@ -4,7 +4,17 @@ Also have Xcode Tools installed.
 init.sh is a terrible hackjob that will probably run things if you have to
 run it more than once. So dont.
 
+Installs:
+	go
+	godag
+	pip
+	virtualenv
+	virtualenvwrapper
+	subl
+	bup
+	git configs
+	~/.bash_profile
+
 DEPENDENCIES:
 Xcode Tools
 Sublime Text 2
-git
