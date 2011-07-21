@@ -36,3 +36,10 @@ cd ~/Code/golang/godag
 hg update release
 ./build.sh install
 
+
+#bup
+cd ~/Code
+git clone git://github.com/apenwarr/bup
+cd bup
+make
+make test
