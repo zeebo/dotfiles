@@ -18,6 +18,10 @@ cp subl-support/Base\ File.sublime-settings ~/Library/Application\ Support/Subli
 cp subl-support/Golang.sublime-build ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/
 cp subl-support/php.sublime-build ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/
 
+#textual styles
+mkdir -p ~/Library/Application\ Support/Textual/Styles
+cp -r textual-support/experimental\ 2 ~/Library/Application\ Support/Textual/Styles/
+
 #Bash profile
 ln -s `pwd`/.bash_profile ~/.bash_profile
 source ~/.bash_profile
