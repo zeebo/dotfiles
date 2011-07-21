@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#Install xcode + sublime text 2 first!
+
 #Get homebrew running
 ruby -e "$(curl -fsSL https://gist.github.com/raw/323731/install_homebrew.rb)"
 
