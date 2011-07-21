@@ -12,6 +12,12 @@ git config --global user.email leterip@gmail.com
 #Sublime text link
 ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
 
+#Sublime text packages
+mkdir -p ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User
+cp subl-support/Base\ File.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/
+cp subl-support/Golang.sublime-build ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/
+cp subl-support/php.sublime-build ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/
+
 #Bash profile
 ln -s `pwd`/.bash_profile ~/.bash_profile
 source ~/.bash_profile
