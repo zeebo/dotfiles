@@ -58,3 +58,10 @@ make test
 
 #Make key holding not stupid
 defaults write -g ApplePressAndHoldEnabled -bool NO
+
+#Set up router system.
+echo "**************** Be sure to enable apache"
+mkvirtualenv router
+pip install paste django werkzeug wsgiproxy
+git clone git://github.com/zeebo/router
+sudo router/setup.sh
