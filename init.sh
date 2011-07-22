@@ -65,3 +65,14 @@ mkvirtualenv router
 pip install paste django werkzeug wsgiproxy
 git clone git://github.com/zeebo/router
 sudo router/setup.sh
+
+#install mysqld
+brew install mysql
+unset TMPDIR
+mysql_install_db --verbose --user=`whoami` --basedir="$(brew --prefix mysql)" --datadir=/usr/local/var/mysql --tmpdir=/tmp
+
+mkdir -p ~/Library/LaunchAgents
+cp /usr/local/Cellar/mysql/5.5.14/com.mysql.mysqld.plist ~/Library/LaunchAgents/
+launchctl load -w ~/Library/LaunchAgents/com.mysql.mysqld.plist
+
+/usr/local/Cellar/mysql/5.5.14/bin/mysql_secure_installation
