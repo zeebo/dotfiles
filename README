@@ -14,6 +14,10 @@ Installs:
 	bup
 	git configs
 	~/.bash_profile
+	textual themes
+	router
+	mysql
+	apache confs
 
 DEPENDENCIES:
 Xcode Tools
