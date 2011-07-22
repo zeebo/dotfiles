@@ -55,6 +55,7 @@ git clone git://github.com/apenwarr/bup
 cd bup
 make
 make test
+sudo make install
 
 #Make key holding not stupid
 defaults write -g ApplePressAndHoldEnabled -bool NO
@@ -76,3 +77,4 @@ cp /usr/local/Cellar/mysql/5.5.14/com.mysql.mysqld.plist ~/Library/LaunchAgents/
 launchctl load -w ~/Library/LaunchAgents/com.mysql.mysqld.plist
 
 /usr/local/Cellar/mysql/5.5.14/bin/mysql_secure_installation
+
