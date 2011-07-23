@@ -22,10 +22,6 @@ cp subl-support/php.sublime-build ~/Library/Application\ Support/Sublime\ Text\ 
 mkdir -p ~/Library/Application\ Support/Textual/Styles
 cp -r textual-support/experimental\ 2 ~/Library/Application\ Support/Textual/Styles/
 
-#Bash profile
-ln -s `pwd`/.bash_profile ~/.bash_profile
-source ~/.bash_profile
-
 #Coding Environment
 mkdir -p ~/Code/envs
 
@@ -33,11 +29,16 @@ mkdir -p ~/Code/envs
 sudo easy_install pip
 pip install virtualenv virtualenvwrapper
 
+#Bash profile
+ln -s `pwd`/.bash_profile ~/.bash_profile
+source ~/.bash_profile
+
 #Hooks
 ln -sF `pwd`/postactivate ~/Code/envs/
 ln -sF `pwd`/postmkvirtualenv ~/Code/envs/
 
 #Golang
+sudo pip install mercurial
 hg clone -u release https://go.googlecode.com/hg/ ~/Code/go
 cd ~/Code/go/src
 ./all.bash
@@ -63,9 +64,13 @@ defaults write -g ApplePressAndHoldEnabled -bool NO
 #Set up router system.
 echo "**************** Be sure to enable apache"
 mkvirtualenv router
+workon router
 pip install paste django werkzeug wsgiproxy
 git clone git://github.com/zeebo/router
-sudo router/setup.sh
+cd router
+sudo setup.sh
+deactivate
+cd ~/Code/dotfiles
 
 #install mysqld
 brew install mysql
