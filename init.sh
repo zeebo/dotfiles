@@ -15,40 +15,17 @@ ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" /usr/lo
 #Sublime text packages
 mkdir -p ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User
 cp subl-support/Base\ File.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/
-cp subl-support/Golang.sublime-build ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/
-cp subl-support/php.sublime-build ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/
 
-#textual styles
-mkdir -p ~/Library/Application\ Support/Textual/Styles
-cp -r textual-support/experimental\ 2 ~/Library/Application\ Support/Textual/Styles/
-
-#Coding Environment
-mkdir -p ~/Code/envs
-
-#Virtualenv wrapper
-sudo easy_install pip
-pip install virtualenv virtualenvwrapper
 
 #Bash profile
 ln -s `pwd`/.bash_profile ~/.bash_profile
 source ~/.bash_profile
 
-#Hooks
-ln -sF `pwd`/postactivate ~/Code/envs/
-ln -sF `pwd`/postmkvirtualenv ~/Code/envs/
-
 #Golang
 sudo pip install mercurial
-hg clone -u release https://go.googlecode.com/hg/ ~/Code/go
-cd ~/Code/go/src
+hg clone -u go1.0.2 https://code.google.com/p/go /usr/local
+cd /usr/local/go/src
 ./all.bash
-
-#Godag
-hg clone https://godag.googlecode.com/hg/ ~/Code/golang/godag
-cd ~/Code/golang/godag
-hg update release
-./build.sh install
-
 
 #bup
 cd ~/Code
@@ -60,17 +37,6 @@ sudo make install
 
 #Make key holding not stupid
 defaults write -g ApplePressAndHoldEnabled -bool NO
-
-#Set up router system.
-echo "**************** Be sure to enable apache"
-mkvirtualenv router
-workon router
-pip install paste django werkzeug wsgiproxy
-git clone git://github.com/zeebo/router
-cd router
-sudo setup.sh
-deactivate
-cd ~/Code/dotfiles
 
 #install mysqld
 brew install mysql

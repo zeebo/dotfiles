@@ -6,18 +6,12 @@ run it more than once. So dont.
 
 Installs:
 	go
-	godag
 	pip
-	virtualenv
-	virtualenvwrapper
 	subl
 	bup
 	git configs
 	~/.bash_profile
-	textual themes
-	router
 	mysql
-	apache confs
 
 DEPENDENCIES:
 Xcode Tools
